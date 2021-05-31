@@ -35,7 +35,6 @@ class Likes(db.Model):
     id = db.Column(
         db.Integer,
         primary_key=True
-        # Needs autoincrement?
     )
 
     user_id = db.Column(
@@ -58,7 +57,6 @@ class User(db.Model):
     id = db.Column(
         db.Integer,
         primary_key=True,
-        # Needs autoincrement?
     )
 
     email = db.Column(
@@ -180,7 +178,6 @@ class Message(db.Model):
     id = db.Column(
         db.Integer,
         primary_key=True,
-        # Needs autoincrement?
     )
 
     text = db.Column(
