@@ -22,7 +22,7 @@ class UserEditForm(FlaskForm):
     """Form for adding users."""
 
     username = StringField('Username', validators=[DataRequired()])
-    email = StringField('E-mail', Email()])
+    email = StringField('E-mail', validators=[Email()])
     image_url = StringField('(Optional) Image URL')
     header_image_url = StringField('(Optional) Header Image URL')
     bio = TextAreaField('(Optional) User Bio')
