@@ -329,6 +329,10 @@ def messages_destroy(message_id):
 
 @app.route('/users/add_like/<int:msg_id>', methods=['POST'])
 def like_message(msg_id):
+    if not g.user:
+        flash("Access unauthorized.", "danger")
+        return redirect("/")
+        
     liked = Likes(user_id=g.user.id, message_id=msg_id)
     db.session.add(liked)
     db.session.commit()
